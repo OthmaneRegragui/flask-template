@@ -14,7 +14,9 @@ This is a basic Flask application that demonstrates a simple auto-routing mechan
 -   Python 3.8+
 -   `pip` and `venv`
 
-## Setup and Installation
+## Project Setup for a New User (Cloned Repository)
+
+Follow these steps if you have just cloned this repository.
 
 1.  **Clone the Repository**
     ```bash
@@ -40,17 +42,9 @@ This is a basic Flask application that demonstrates a simple auto-routing mechan
     pip install -r requirements.txt
     ```
 
-4.  **Initialize the Database**
-    Run the following Flask CLI commands to set up the database and apply the initial migration.
-
+4.  **Apply Database Migrations**
+    This command will create your local `app.db` file and set up all the necessary tables based on the existing migration scripts.
     ```bash
-    # (First time only) Create the migrations folder
-    flask db init
-
-    # Create an initial migration script
-    flask db migrate -m "Initial migration"
-
-    # Apply the migration to create the database and tables
     flask db upgrade
     ```
 
@@ -61,9 +55,21 @@ This is a basic Flask application that demonstrates a simple auto-routing mechan
     ```
     The application will be available at `http://127.0.0.1:5000`.
 
-## How It Works
+## Developer Guide: Managing the Database
 
-The core of the application is the `auto_route_handler` in `app/auto_loader.py`. When you navigate to a URL, it first checks for a matching rule in `app/config/rules.py`.
+These commands are for developers who are modifying the database schema.
 
--   If a rule is found, it executes the associated handler or middleware.
--   If no rule is found for a `GET` request, it attempts to render a corresponding HTML template from the `app/templates/` directory (e.g., a request to `/users` will try to render `app/templates/users.html`).
+-   **Initializing (First time ever)**: If you are starting this project from scratch and the `migrations` directory does not exist, run this command **once**:
+    ```bash
+    flask db init
+    ```
+
+-   **Creating New Migrations**: After you change your models in `app/models/`, run this command to automatically generate a new migration script:
+    ```bash
+    flask db migrate -m "A short description of the model changes"
+    ```
+
+-   **Applying Migrations**: To apply new migrations to the database, run:
+    ```bash
+    flask db upgrade
+    ```

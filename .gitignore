@@ -18,7 +18,6 @@ instance/*
 
 # Migrations
 migrations/*
-!migrations/.gitkeep
 # IDE & Editor specific files
 .vscode/
 .idea/
