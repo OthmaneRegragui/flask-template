@@ -11,6 +11,6 @@
     {% endfor %}
 </ul>
 {% else %}
-<p>No users found. <a href="/user/add">Add one?</a></p>
+<p>No users found. <a href="{{ url_for('auto_route_path', path='user/add') }}">Add one?</a></p>
 {% endif %}
 {% endblock %}

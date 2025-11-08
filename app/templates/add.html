@@ -4,7 +4,7 @@
 
 {% block content %}
 <h1>Add New User</h1>
-<form method="POST" action="/user/add">
+<form method="POST" action="{{ url_for('auto_route_path', path='user/add') }}">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required>
     <input type="submit" value="Add User">

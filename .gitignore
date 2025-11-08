@@ -27,6 +27,7 @@ migrations/*
 
 # Dependency Management
 pip-freeze.txt
+all_content.txt
 # Note: Keep requirements.txt if you manage dependencies manually,
 # but ignore it if you use a tool like Poetry or Pipenv that generates it.
 # For this project, you likely want to keep it.
@@ -34,7 +35,6 @@ pip-freeze.txt
 
 # Environment variables
 .env
-*.env
 
 # Build & Distribution
 build/

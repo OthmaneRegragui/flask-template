@@ -1,6 +1,5 @@
 import os
 from flask import Flask
-from flask_migrate import upgrade
 from .extensions import db, migrate
 from .auto_loader import auto_route_handler
 
@@ -19,8 +18,5 @@ def create_app():
     methods = ['GET', 'POST']
     app.add_url_rule('/', 'auto_route_index', lambda: auto_route_handler(''), methods=methods)
     app.add_url_rule('/<path:path>', 'auto_route_path', auto_route_handler, methods=methods)
-
-    with app.app_context():
-        upgrade()
 
     return app

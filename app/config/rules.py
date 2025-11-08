@@ -1,4 +1,3 @@
-# ./app/config/rules.py
 from flask import session, redirect, abort, request, render_template
 from app.models.user import User
 

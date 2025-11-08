@@ -11,9 +11,9 @@
 <body>
     <header>
         <nav>
-            <a href="/">Home</a>
-            <a href="/users">Users</a>
-            <a href="/user/add">Add User</a>
+            <a href="{{ url_for('auto_route_index') }}">Home</a>
+            <a href="{{ url_for('auto_route_path', path='users') }}">Users</a>
+            <a href="{{ url_for('auto_route_path', path='add') }}">Add User</a>
         </nav>
     </header>
     <main>
