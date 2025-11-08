@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+.venv
+venv/
+env/
+
+# Flask
+instance/*
+!instance/.gitkeep
+*.sqlite
+*.sqlite3
+*.db
+
+# Migrations
+migrations/*
+!migrations/.gitkeep
+# IDE & Editor specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Dependency Management
+pip-freeze.txt
+# Note: Keep requirements.txt if you manage dependencies manually,
+# but ignore it if you use a tool like Poetry or Pipenv that generates it.
+# For this project, you likely want to keep it.
+# Uncomment the line above if you generate it automatically.
+
+# Environment variables
+.env
+*.env
+
+# Build & Distribution
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Testing & Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
