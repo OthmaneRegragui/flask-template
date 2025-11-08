@@ -20,8 +20,8 @@ Follow these steps if you have just cloned this repository.
 
 1.  **Clone the Repository**
     ```bash
-    git clone <your-repository-url>
-    cd <your-repository-name>
+    git clone https://github.com/OthmaneRegragui/flask-template <project name>
+    cd <project name>
     ```
 
 2.  **Create and Activate a Virtual Environment**
